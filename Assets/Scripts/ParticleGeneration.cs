@@ -26,8 +26,8 @@ public class ParticleGeneration : MonoBehaviour
     private void SpawnParticle()
     {
         //Spawn a particle at a random position around object
-        Vector3 randomPositionInsideCircle = Random.insideUnitCircle * _radius;
-        Vector3 particlePosition = transform.position + randomPositionInsideCircle;
+        Vector2 randomPositionInsideCircle = Random.insideUnitCircle * _radius;
+        Vector2 particlePosition = (Vector2) transform.position + randomPositionInsideCircle;
         GameObject particle = Instantiate(_particlePrefab, particlePosition, transform.rotation, _particlesFolderTransform);
 
         // Initialize particle movement

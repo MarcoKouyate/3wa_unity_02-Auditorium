@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: -800410489481620370}
   - component: {fileID: 736855370749787639}
   - component: {fileID: -7161042314607259897}
+  - component: {fileID: -3078044721793918785}
+  - component: {fileID: 6332360725488919755}
   m_Layer: 0
   m_Name: MusicBox
   m_TagString: MusicBox
@@ -76,7 +78,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -158,3 +160,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!58 &-3078044721793918785
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736855370749787637}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &6332360725488919755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736855370749787637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319f003ca5e4fc245bdea39d2a238236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeBeforeDecrease: 0
+  _decreaseRate: 0

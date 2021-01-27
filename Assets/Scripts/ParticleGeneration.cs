@@ -32,7 +32,7 @@ public class ParticleGeneration : MonoBehaviour
 
         // Initialize particle movement
         Rigidbody2D particleRigidbody = particle.GetComponent<Rigidbody2D>();
-        particleRigidbody.AddForce(transform.up * _speed);
+        particleRigidbody.velocity = transform.up * _speed;
     }
 
     private float _nextSpawnTime;

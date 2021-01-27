@@ -47,4 +47,4 @@ MonoBehaviour:
     type: 3}
   _interval: 0.1
   _radius: 1
-  _speed: 100
+  _speed: 1

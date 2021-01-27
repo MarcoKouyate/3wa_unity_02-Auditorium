@@ -12,6 +12,9 @@ public class FillVisualizer : MonoBehaviour
     [Range(0.0f, 1.0f)]
     [SerializeField] private float amount;
 
+    [Tooltip("Check this if you want to change opacity as well")]
+    [SerializeField] private bool gradeOpacity;
+
 
     private void Start()
     {
@@ -25,7 +28,10 @@ public class FillVisualizer : MonoBehaviour
         FillColorBars();
     }
 
-
+    public void fill(float value)
+    {
+        amount = value;
+    }
 
     private void CreateColorBars()
     {
@@ -63,7 +69,18 @@ public class FillVisualizer : MonoBehaviour
 
             residual -= colorBarAmount;
 
-            colorBar.amount = colorBarAmount * (amount / _amountPerColorBar);
+            colorBar.amount = colorBarAmount * (GetMaxOpacity() / _amountPerColorBar);
+        }
+    }
+
+    private float GetMaxOpacity()
+    {
+        if (gradeOpacity)
+        {
+            return amount;
+        } else
+        {
+            return 1;
         }
     }
 

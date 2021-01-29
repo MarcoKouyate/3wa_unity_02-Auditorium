@@ -36,7 +36,6 @@ public class MouseDragResize : MonoBehaviour, IMouseDragAction
         }
 
 
-
         _hit = hit;
         if (_isSelected)
         {

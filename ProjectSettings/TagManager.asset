@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MusicBox
   - Particle
+  - Effector
   layers:
   - Default
   - TransparentFX

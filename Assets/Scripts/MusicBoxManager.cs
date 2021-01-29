@@ -24,11 +24,11 @@ public class MusicBoxManager : MonoBehaviour
     {
         if(Time.time > _startDecreaseTime)
         {
-            addVolume(-_decreaseRate * Time.deltaTime);
+            AddVolume(-_decreaseRate * Time.deltaTime);
         }
     }
 
-    private void addVolume(float amount)
+    private void AddVolume(float amount)
     {
         _volume += amount;
         _volume = Mathf.Clamp01(_volume);
@@ -39,7 +39,7 @@ public class MusicBoxManager : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Particle"))
         {
-            addVolume(_increaseRate);
+            AddVolume(_increaseRate);
             _startDecreaseTime = Time.time + _timeBeforeDecrease;
         }
     }

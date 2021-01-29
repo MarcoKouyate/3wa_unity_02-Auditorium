@@ -45,9 +45,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8a2aaeb8500014188a7e6b979543d028, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   _colorBarPrefab: {fileID: 8846704821668709535, guid: 9c71e4025f81d304995f8f07f672c3cb,
     type: 3}
   _colorBarCount: 10
-  amount: 1
+  amount: 0.668
   gradeOpacity: 1
 --- !u!114 &6332360725488919755
 MonoBehaviour:
@@ -188,5 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319f003ca5e4fc245bdea39d2a238236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeBeforeDecrease: 0
-  _decreaseRate: 0
+  _timeBeforeDecrease: 1
+  _decreaseRate: 0.414
+  _increaseRate: 0.114

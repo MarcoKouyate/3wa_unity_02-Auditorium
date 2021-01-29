@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(IMouseDragAction))]
+[RequireComponent(typeof(LineRenderer))]
 public class CursorSelector : MonoBehaviour
 {
     [SerializeField] private Texture2D icon;
     [SerializeField] private CircleShape circle;
     [SerializeField] private float _radius;
+    [SerializeField] private Material _onMaterial;
+    [SerializeField] private Material _offMaterial;
 
     private IMouseDragAction _action;
 
@@ -27,9 +31,11 @@ public class CursorSelector : MonoBehaviour
     #region Unity Cycle
     private void Awake()
     {
+        _lineRenderer = GetComponent<LineRenderer>();
         _hotspot = new Vector2(icon.width / 2, icon.height / 2);
         _wasInside = false;
         _action = GetComponent<IMouseDragAction>();
+        _lineRenderer.material = _offMaterial;
     }
 
     public void Update()
@@ -50,9 +56,17 @@ public class CursorSelector : MonoBehaviour
         _action.UpdateMousePosition(_hit);
     }
 
-    public void ChangeCursor()
+    public void ChangeCursor(bool change)
     {
-        Cursor.SetCursor(icon, _hotspot, CursorMode.Auto);
+        if(change)
+        {
+            _lineRenderer.material = _onMaterial;
+            Cursor.SetCursor(icon, _hotspot, CursorMode.Auto);
+        } else
+        {
+            _lineRenderer.material = _offMaterial;
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        }
     }
 
     #endregion
@@ -69,11 +83,6 @@ public class CursorSelector : MonoBehaviour
     public bool IsMouseOver()
     {
         return _direction.sqrMagnitude < _magnitude;
-    }
-
-    public bool IsClicked()
-    {
-        return Input.GetButton("Fire1") && IsMouseOver(); 
     }
 
     public bool IsMouseEnter()
@@ -97,5 +106,6 @@ public class CursorSelector : MonoBehaviour
     private RaycastHit2D _hit;
     private Vector2 _direction;
     private float _magnitude;
+    private LineRenderer _lineRenderer;
 
 }

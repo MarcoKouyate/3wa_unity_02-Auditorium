@@ -26,19 +26,20 @@ public class EffectorsSelectionManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _selection = GetSelection();
+
         }
 
         if (Input.GetMouseButtonUp(0))
         {
+            _selection.ChangeCursor(false);
             _selection = null;
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            
         }
 
         if (_selection == null) return;
 
-        _selection.ChangeCursor();
+        _selection.ChangeCursor(true);
         _selection.Action();
-
     }
 
     private CursorSelector GetSelection()

@@ -345,6 +345,8 @@ MonoBehaviour:
   icon: {fileID: 2800000, guid: 3044446006d994f4cafbb545084e6e6b, type: 3}
   circle: {fileID: 2709105607831174315}
   _radius: 1.5
+  _onMaterial: {fileID: 2100000, guid: 17cb80c9f2599304cbf43620b18b3911, type: 2}
+  _offMaterial: {fileID: 2100000, guid: bda43d5124e439044a2aeed805a43894, type: 2}
 --- !u!114 &2709105607831174321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +389,8 @@ MonoBehaviour:
   icon: {fileID: 2800000, guid: 7a9a0dd7570af2745a00bd060fbda302, type: 3}
   circle: {fileID: 7554316507764384506}
   _radius: 0.5
+  _onMaterial: {fileID: 0}
+  _offMaterial: {fileID: 0}
 --- !u!1001 &2709105607312702730
 PrefabInstance:
   m_ObjectHideFlags: 0

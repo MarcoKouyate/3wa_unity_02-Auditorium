@@ -29,14 +29,14 @@ public class EffectorsSelectionManager : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && _selection != null)
         {
             _selection.ChangeCursor(false);
             _selection = null;
-            
         }
 
         if (_selection == null) return;
+
 
         _selection.ChangeCursor(true);
         _selection.Action();

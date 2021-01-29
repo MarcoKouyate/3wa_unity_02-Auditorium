@@ -5,8 +5,23 @@ using UnityEngine;
 [RequireComponent(typeof(CursorSelector))]
 public class MouseDragResize : MonoBehaviour, IMouseDragAction
 {
-    [SerializeField] float _margin;
+    [SerializeField] float _minRadius;
     [SerializeField] float _maxRadius;
+
+    public float MinRadius
+    {
+        get => _minRadius;
+    }
+
+    public float MaxRadius
+    {
+        get => _maxRadius;
+    }
+
+    public float Radius
+    {
+        get => _cursor.Radius;
+    }
 
 
     private void Awake()
@@ -47,12 +62,10 @@ public class MouseDragResize : MonoBehaviour, IMouseDragAction
 
     private void UpdateRadius(Vector2 direction)
     {
-
-        float selectRadius = _originalRadius - _margin;
-        if (selectRadius * selectRadius < direction.sqrMagnitude)
+        if (_minRadius * _minRadius < direction.sqrMagnitude)
         {
             float scale = _originalRadius *  _offset + _originalRadius *  (direction.magnitude - _offset);
-            _cursor.Radius = Mathf.Clamp(scale, _originalRadius - _margin, _maxRadius);
+            _cursor.Radius = Mathf.Clamp(scale, _minRadius, _maxRadius);
         }
     }
 

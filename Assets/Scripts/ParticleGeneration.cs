@@ -8,6 +8,7 @@ public class ParticleGeneration : MonoBehaviour
     [SerializeField] private float _interval;
     [SerializeField] private float _radius;
     [SerializeField] private float _speed;
+    [SerializeField] private float _drag;
 
     private void Awake()
     {
@@ -33,6 +34,7 @@ public class ParticleGeneration : MonoBehaviour
         // Initialize particle movement
         Rigidbody2D particleRigidbody = particle.GetComponent<Rigidbody2D>();
         particleRigidbody.velocity = transform.up * _speed;
+        particleRigidbody.drag = _drag;
     }
 
     private float _nextSpawnTime;

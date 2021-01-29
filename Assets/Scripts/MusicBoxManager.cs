@@ -10,6 +10,9 @@ public class MusicBoxManager : MonoBehaviour
     [Range(0.0f, 1.0f)]
     [SerializeField] float _decreaseRate;
 
+    [Range(0.0f, 1.0f)]
+    [SerializeField] float _increaseRate;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -19,7 +22,6 @@ public class MusicBoxManager : MonoBehaviour
 
     private void Update()
     {
-
         if(Time.time > _startDecreaseTime)
         {
             addVolume(-_decreaseRate * Time.deltaTime);
@@ -37,7 +39,7 @@ public class MusicBoxManager : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Particle"))
         {
-            addVolume(0.1f);
+            addVolume(_increaseRate);
             _startDecreaseTime = Time.time + _timeBeforeDecrease;
         }
     }

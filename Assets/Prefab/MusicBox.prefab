@@ -190,4 +190,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timeBeforeDecrease: 1
   _decreaseRate: 0.414
-  _increaseRate: 0.114
+  _increaseRate: 0.05

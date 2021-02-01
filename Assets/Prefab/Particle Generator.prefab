@@ -46,5 +46,6 @@ MonoBehaviour:
   _particlePrefab: {fileID: 4272851159041262519, guid: 4b69f5827dd568f47b43fd41bc202e61,
     type: 3}
   _interval: 0.1
-  _radius: 1
-  _speed: 1
+  _radius: 0.5
+  _speed: 7
+  _drag: 0.5

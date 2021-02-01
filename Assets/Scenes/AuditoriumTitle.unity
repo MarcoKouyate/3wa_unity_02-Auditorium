@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56113cafa1abb154c917413f81f22422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Auditorium
+  _nextScene: Level01
 --- !u!4 &32971404
 Transform:
   m_ObjectHideFlags: 0

@@ -341,6 +341,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3276052303515700318}
   - component: {fileID: 3276052303515700319}
+  - component: {fileID: 8374574747824818122}
+  - component: {fileID: 2386883892848215417}
+  - component: {fileID: 3343029473270931913}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -376,6 +379,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _winVolume: 1
   _winDuration: 1
+--- !u!114 &8374574747824818122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3276052303515700289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d213d8f9e0837004b904b7d7231ca68f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2386883892848215417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3276052303515700289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6897fd60fb129c84dafad21aeaf925be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextScene: 
+--- !u!114 &3343029473270931913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3276052303515700289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fa0b421e35a034b9c05f44435f9b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3276052303547026595
 GameObject:
   m_ObjectHideFlags: 0

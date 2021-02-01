@@ -7,6 +7,8 @@ public class SceneChange : MonoBehaviour
 {
    public void LoadScene(string name)
     {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
         if (name == null)
         {
             Debug.LogWarning("Tried to load a scene with no name");

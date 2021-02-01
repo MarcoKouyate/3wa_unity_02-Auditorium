@@ -127,7 +127,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3276052303544670734}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &662148614
+--- !u!114 &662148615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662148613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d213d8f9e0837004b904b7d7231ca68f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &662148616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextScene: AuditoriumTitle
---- !u!114 &662148615
+--- !u!114 &662148618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,7 +161,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 662148613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d213d8f9e0837004b904b7d7231ca68f, type: 3}
+  m_Script: {fileID: 11500000, guid: b5fa0b421e35a034b9c05f44435f9b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &679048357

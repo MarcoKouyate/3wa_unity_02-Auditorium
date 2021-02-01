@@ -38,12 +38,14 @@ public class FillVisualizer : MonoBehaviour
         _colorBars = new List<FillColor>();
         Vector3 localScale = transform.localScale;
         float colorBarSize = localScale.y / _colorBarCount;
+        float localPositionOffset = transform.localScale.y / 2;
 
         for (int i = 0; i < _colorBarCount; i++)
         {
             GameObject colorBar = Instantiate(_colorBarPrefab, transform);
             colorBar.transform.localScale = new Vector3(1, colorBarSize, 1);
-            colorBar.transform.Translate(Vector3.up * colorBarSize * i, Space.Self);
+            Vector3 verticalPosition = Vector3.up * (colorBarSize * (i + 0.5f) - localPositionOffset);
+            colorBar.transform.Translate(verticalPosition, Space.Self);
 
             FillColor colorBarScript = colorBar.GetComponent<FillColor>();
 

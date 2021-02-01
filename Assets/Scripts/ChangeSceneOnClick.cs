@@ -6,7 +6,13 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(SceneChange))]
 public class ChangeSceneOnClick : MonoBehaviour
 {
-    [SerializeField] private string nextScene;
+    [SerializeField] private string _nextScene;
+
+    public string NextScene
+    {
+        get => _nextScene;
+        set => _nextScene = value;
+    } 
 
     private void Awake()
     {
@@ -17,7 +23,7 @@ public class ChangeSceneOnClick : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            _sceneManager.LoadScene(nextScene);
+            _sceneManager.LoadScene(_nextScene);
         }
     }
 

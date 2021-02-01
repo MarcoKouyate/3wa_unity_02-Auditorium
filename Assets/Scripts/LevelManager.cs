@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(LevelWinTransition))]
 public class LevelManager : MonoBehaviour
 {
     [Range(0f, 1f)]
@@ -10,13 +11,20 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
+        _winTransition = GetComponent<LevelWinTransition>();
         GameObject[] musicBoxes = GameObject.FindGameObjectsWithTag("MusicBox");
-        _audioSources = new AudioSource[musicBoxes.Length];
+        _audioSources = RetrieveAudioSources(musicBoxes);
+    }
 
-        for(int i = 0; i < musicBoxes.Length; i++)
+    private AudioSource[] RetrieveAudioSources(GameObject[] gameObjects)
+    {
+        AudioSource[] audioSources = new AudioSource[gameObjects.Length];
+
+        for (int i = 0; i < gameObjects.Length; i++)
         {
-            _audioSources[i] = musicBoxes[i].GetComponent<AudioSource>();
+            audioSources[i] = gameObjects[i].GetComponent<AudioSource>();
         }
+        return audioSources;
     }
 
     private void Update()
@@ -25,7 +33,7 @@ public class LevelManager : MonoBehaviour
         {
             if (Time.time > _winTime)
             {
-                Win();
+                _winTransition.Win();
             }
         } else
         {
@@ -51,11 +59,7 @@ public class LevelManager : MonoBehaviour
         return audioSource.volume >= _winVolume;
     }
 
-    private void Win()
-    {
-        Debug.Log("WIN");
-    }
-
+    private LevelWinTransition _winTransition;
     private AudioSource[] _audioSources;
     private float _winTime;
 }

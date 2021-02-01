@@ -26,7 +26,6 @@ public class EffectorsSelectionManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _selection = GetSelection();
-
         }
 
         if (Input.GetMouseButtonUp(0) && _selection != null)

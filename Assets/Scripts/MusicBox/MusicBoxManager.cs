@@ -59,6 +59,12 @@ public class MusicBoxManager : MonoBehaviour
         }
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = _color.material.color;
+        Gizmos.DrawCube(transform.position, transform.localScale);
+    }
+
     private AudioSource audioSource;
     private float _volume;
 

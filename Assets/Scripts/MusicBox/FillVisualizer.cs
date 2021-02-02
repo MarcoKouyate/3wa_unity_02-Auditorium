@@ -98,7 +98,7 @@ public class FillVisualizer : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.magenta;
+        Gizmos.color = Color.gray;
         Gizmos.DrawWireCube(transform.position, transform.localScale);
     }
 

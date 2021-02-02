@@ -175,6 +175,7 @@ MonoBehaviour:
   _timeBeforeDecrease: 1
   _decreaseRate: 0.414
   _increaseRate: 0.05
+  _color: {fileID: 11400000, guid: fcfb89443146a5549bf2f1e7898c7821, type: 2}
 --- !u!61 &391482936
 BoxCollider2D:
   m_ObjectHideFlags: 0

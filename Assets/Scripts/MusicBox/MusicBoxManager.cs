@@ -3,21 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(FillVisualizer))]
 public class MusicBoxManager : MonoBehaviour
 {
-    [SerializeField] float _timeBeforeDecrease;
+    [SerializeField] private float _timeBeforeDecrease;
 
     [Range(0.0f, 1.0f)]
-    [SerializeField] float _decreaseRate;
+    [SerializeField] private float _decreaseRate;
 
     [Range(0.0f, 1.0f)]
-    [SerializeField] float _increaseRate;
+    [SerializeField] private float _increaseRate;
 
-    private void Start()
+    [SerializeField] private ColorData _color;
+
+
+    private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         _startDecreaseTime = Time.time;
         _volume = audioSource.volume;
+    }
+
+    private void Start()
+    {
+        GetComponent<FillVisualizer>().SetMaterial(_color.material);
     }
 
     private void Update()
@@ -39,8 +48,14 @@ public class MusicBoxManager : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Particle"))
         {
-            AddVolume(_increaseRate);
-            _startDecreaseTime = Time.time + _timeBeforeDecrease;
+
+            string otherColor = collider.GetComponent<ParticleColor>().Color.title;
+
+            if(_color.title.Equals(otherColor))
+            {
+                AddVolume(_increaseRate);
+                _startDecreaseTime = Time.time + _timeBeforeDecrease;
+            }
         }
     }
 

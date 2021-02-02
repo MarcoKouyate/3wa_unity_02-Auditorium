@@ -16,9 +16,8 @@ public class FillVisualizer : MonoBehaviour
     [SerializeField] private bool gradeOpacity;
 
 
-    private void Start()
+    private void Awake()
     {
-
         CreateColorBars();
         _amountPerColorBar = amount / _colorBarCount;
     }
@@ -28,10 +27,21 @@ public class FillVisualizer : MonoBehaviour
         FillColorBars();
     }
 
-    public void fill(float value)
+
+
+    public void Fill(float value)
     {
         amount = value;
     }
+
+    public void SetMaterial(Material material)
+    {
+        foreach (FillColor colorBar in _colorBars)
+        {
+            colorBar.SetMaterial(material);
+        }
+    }
+
 
     private void CreateColorBars()
     {

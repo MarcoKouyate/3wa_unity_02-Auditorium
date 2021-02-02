@@ -15,7 +15,7 @@ public class VolumeVisualizer : MonoBehaviour
 
     private void Update()
     {
-        visualizer.fill(audioSource.volume);
+        visualizer.Fill(audioSource.volume);
     }
 
     private AudioSource audioSource;

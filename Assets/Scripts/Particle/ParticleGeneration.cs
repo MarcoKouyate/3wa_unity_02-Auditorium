@@ -37,6 +37,23 @@ public class ParticleGeneration : MonoBehaviour
         particleRigidbody.drag = _drag;
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, _radius);
+        DrawGizmoArrow(transform.position, transform.up * _speed * .1f, Color.cyan);
+    }
+
+    public static void DrawGizmoArrow(Vector3 origin, Vector3 direction, Color color, float arrowHeadLength = 0.25f, float arrowHeadAngle = 20.0f)
+    {
+        Gizmos.color = color;
+        Gizmos.DrawRay(origin, direction);
+        Vector3 right = Quaternion.LookRotation(direction) * Quaternion.Euler(arrowHeadAngle, 0, 0) * Vector3.back;
+        Vector3 left = Quaternion.LookRotation(direction) * Quaternion.Euler(-arrowHeadAngle, 0, 0) * Vector3.back;
+        Gizmos.DrawRay(origin + direction, right * arrowHeadLength);
+        Gizmos.DrawRay(origin + direction, left * arrowHeadLength);
+    }
+
     private float _nextSpawnTime;
     private Transform _particlesFolderTransform;
 }

@@ -96,6 +96,12 @@ public class FillVisualizer : MonoBehaviour
         }
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(transform.position, transform.localScale);
+    }
+
     private List<FillColor> _colorBars;
     private float _amountPerColorBar;
 }

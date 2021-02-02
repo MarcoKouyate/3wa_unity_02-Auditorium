@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class TransitionToNextLevelOnWin : MonoBehaviour, IWinEvent
 {
-    [SerializeField] private string _nextScene;
+    private void Awake()
+    {
+        _action = GetComponent<ChangeSceneOnClick>();
+    }
 
     public void OnWin()
     {
         if(_action == null)
         {
             _action= gameObject.AddComponent(typeof(ChangeSceneOnClick)) as ChangeSceneOnClick;
-            _action.NextScene = _nextScene;
         }
     }
 

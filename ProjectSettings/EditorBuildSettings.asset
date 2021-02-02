@@ -8,22 +8,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AuditoriumTitle.unity
     guid: be2bf6f9641141e46a11bff506cab641
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Auditorium.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Levels/Chapter 1/Level01.unity
+    path: Assets/Scenes/Levels/Chapter 1/Level_1-1.unity
     guid: 121fbd67a62dc43428b3f276faf1c267
   - enabled: 1
-    path: Assets/Scenes/Levels/Chapter 1/Level02.unity
+    path: Assets/Scenes/Levels/Chapter 1/Level_1-2.unity
     guid: b2a41039fbb6a02468b1ae5bd6eec70c
   - enabled: 1
-    path: Assets/Scenes/Levels/Chapter 1/Level03.unity
+    path: Assets/Scenes/Levels/Chapter 1/Level_1-3.unity
     guid: 901ca721bfd7fb141b0ea4c780eb8f5c
   - enabled: 1
-    path: Assets/Scenes/Levels/Chapter 1/Level04.unity
+    path: Assets/Scenes/Levels/Chapter 1/Level_1-4.unity
     guid: 238efc8d6c526e744b0e268ea47af010
   - enabled: 1
-    path: Assets/Scenes/Levels/Chapter 1/Level05.unity
+    path: Assets/Scenes/Levels/Chapter 1/Level_1-5.unity
     guid: 00848b12e3ddad84f8b62cc8de62991e
+  - enabled: 1
+    path: Assets/Scenes/Levels/Chapter 2/Level_2-1.unity
+    guid: dadb1f2cf0cf3db44a8c478cb81964e4
   m_configObjects: {}

@@ -8,4 +8,10 @@ This project is using Unity 2019.4.18 (LTS) version
 * Locate this project with Unity Hub and open
 
 ## TO DO
-(Coming Soon)
+* UI
+* Transition between levels
+* Chapter 3
+* Save files
+* Set Instruments to each music box
+* Credits screen
+* Pause

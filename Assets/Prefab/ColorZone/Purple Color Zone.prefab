@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1652234492921376454, guid: 1f0777ba77a8b284c8314aebf68881a8,
         type: 3}
       propertyPath: m_Name
-      value: Purple Color Zone  Variant
+      value: Purple Color Zone
       objectReference: {fileID: 0}
     - target: {fileID: 1652234492921376456, guid: 1f0777ba77a8b284c8314aebf68881a8,
         type: 3}
